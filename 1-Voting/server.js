@@ -9,10 +9,10 @@ app.listen(process.env.PORT || port, function(){
     console.log("Listening on " + port);
 });
 
-app.use(express.static('static'));
+app.use(express.static('./static'));
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/static/index.html');
+    res.sendFile(__dirname + './static/index.html');
 });
 
 app.get('/jokes', function(req, res) {
