@@ -12,7 +12,7 @@ app.listen(process.env.PORT || port, function(){
 app.use(express.static('static'));
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/static/index.html');
+    res.sendFile('index.html');
 });
 
 app.get('/jokes', function(req, res) {
